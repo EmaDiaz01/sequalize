@@ -16,5 +16,6 @@ module.exports = {
     detail:(req,res)=>{
         db.Genre.findByPk(req.params.id)
             .then(genre=>res.render('genresDetail',{genre}))
+            .catch(error=>console.log(error))
     }
 }
